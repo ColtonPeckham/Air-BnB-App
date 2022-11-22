@@ -10,4 +10,4 @@
 # User.create(name: "Colton", email: "colton@example.com", image: "placeholder", password: "password1", password_confirmation: "password1")
 # User.create(name: "Steve", email: "steve@example.com", image: "placeholder", password: "password", password_confirmation: "password")
 
-Reservation.create(user_id: 3, room_id: 1, start_date: "12-05-2022", end_date: "12-10-2022", price: 120.00, total: 600.00)
+

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+
+  resources :rooms
+
   resources :reviews
   resources :room_images
+
   get "/signup" => "users#new"
   post "/users" => "users#create"
 
@@ -9,4 +13,5 @@ Rails.application.routes.draw do
   get "/logout" => "sessions#destroy"
 
   resources :reservations
+
 end
