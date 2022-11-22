@@ -1,2 +1,18 @@
-<h1>Reviews#edit</h1>
-<p>Find me in app/views/reviews/edit.html.erb</p>
+<h1>Edit photo</h1>
+<%= form_with model: @photo do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :width %>
+    <%= form.text_field :width %>
+  </div>
+  <div>
+    <%= form.label :height %>
+    <%= form.text_field :height %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end%>
