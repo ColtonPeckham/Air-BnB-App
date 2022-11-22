@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'room_images/create'
+  get 'room_images/destroy'
+  get 'create/destroy'
   get "/signup" => "users#new"
   post "/users" => "users#create"
   
