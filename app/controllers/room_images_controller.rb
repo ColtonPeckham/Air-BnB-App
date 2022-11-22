@@ -2,7 +2,7 @@ class RoomImagesController < ApplicationController
   def create
     @room_image = Room_image.new(
       room_id: params[:room_id],
-      url: params["url"],
+      url: params["url"]
     )
     @room_image.save
   end
@@ -11,7 +11,7 @@ class RoomImagesController < ApplicationController
     @room_image = Room_image.find_by(params[:id])
     @room_image = Room_image.new(
       room_id: params[:room_id],
-      url: params["url"],
+      url: params["url"]
     )
   end
 

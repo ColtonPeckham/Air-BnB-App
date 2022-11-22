@@ -1,0 +1,6 @@
+<h1>All Reviews</h1>
+<% @review.each do |review| %>
+  <h2><%= review.reservation_id %></h2>
+  <p>rating: <%= review.rating %></p>
+  <p>comments: <%= review.comment %></p>
+<% end %>
