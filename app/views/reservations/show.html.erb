@@ -1,0 +1,10 @@
+<h1>reservation info</h1>
+  <h2><%= @reservation.user_id %></h2>
+  <p>room_id: <%= @reservation.room_id %></p>
+  <p>start_date: <%= @reservation.start_date %></p>
+  <p>end_date: <%= @reservation.end_date %></p>
+  <p>price: <%= @reservation.price %></p>
+  <p>total: <%= @reservation.total %></p>
+<a href="/reservations">Back to all reservations</a>
+<%= link_to "Edit reservation", edit_reservation_path(@reservation) %>
+<%= link_to "Destroy reservation", reservation_path(@reservation), data: {turbo_method: :delete} %>
