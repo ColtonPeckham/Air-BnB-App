@@ -4,6 +4,11 @@ class RoomsController < ApplicationController
     render template: "rooms/index"
   end
 
+  def show
+    @room = Room.find_by(id: params[:id])
+    render template: "rooms/show"
+  end
+
   def new
     @room = Room.new
     render template: "rooms/new"
@@ -11,7 +16,7 @@ class RoomsController < ApplicationController
 
   def create
     @room = Room.new(
-      user_id: params[:room][:user_id],
+      user_id: current_user.id,
       address: params[:room][:address],
       city: params[:room][:city],
       state: params[:room][:state],
@@ -49,7 +54,7 @@ class RoomsController < ApplicationController
     @room.total_occupancy = params[:room][:total_occupancy]
     @total_bedrooms.name = params[:total_bedrooms][:name]
     @room.total_bathrooms = params[:room][:total_bathrooms]
-    
+
     @room.save
     redirect_to "/rooms"
   end
